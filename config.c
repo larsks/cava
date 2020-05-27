@@ -471,7 +471,7 @@ bool load_config(char configPath[PATH_MAX], struct config_params *p, bool colors
 
     free(p->audio_source);
 
-    char *input_method_name;
+    char *input_method_name = "unknown";
     for (size_t i = 0; i < ARRAY_SIZE(default_methods); i++) {
         enum input_method method = default_methods[i];
         if (has_input_method[method]) {
